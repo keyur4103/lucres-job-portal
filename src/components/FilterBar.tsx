@@ -1,8 +1,9 @@
 import { FiSearch, FiUsers, FiEdit3, FiArrowLeft } from "react-icons/fi";
+import { Lock } from "lucide-react";
 
 const FilterBar: React.FC = () => {
   return (
-    <div className="bg-white p-5 m-5">
+    <div className="bg-white p-6 m-6">
       <div className="flex items-center mb-6">
         <FiArrowLeft
           className="text-gray-600 cursor-pointer hover:text-green-500"
@@ -11,9 +12,26 @@ const FilterBar: React.FC = () => {
         <span className="ml-2 text-gray-600 hover:text-green-500 cursor-pointer">
           Back to Dashboard
         </span>
+
+        {/* Spacer to push content to the end */}
+        <div className="flex items-center ml-auto gap-6">
+          {/* Active Until section */}
+          <div className="flex items-center text-gray-500 text-sm">
+            <span className="font-semibold">Active Until:</span>
+            <span className="ml-1">Jan 31, 2028</span>
+          </div>
+
+          {/* Button */}
+          <button className="flex h-10 items-center gap-2 border border-gray-300 px-3 py-1 rounded-md hover:bg-gray-100 transition">
+            <Lock className="w-4 h-4 text-green-600" />
+            <span className="text-gray-700 text-sm font-semibold">
+              4/5 Reveals Left
+            </span>
+          </button>
+        </div>
       </div>
 
-      <div className="border p-6 rounded-lg mb-6">
+      <div className="border border-gray-300 p-6 rounded-lg mb-6">
         <div className="flex justify-between items-center">
           <div>
             <h2 className="text-lg font-semibold">Senior Product Designer</h2>
@@ -36,7 +54,7 @@ const FilterBar: React.FC = () => {
 
       {/* Tabs */}
       <div className="flex flex-wrap gap-4 mb-6">
-        <button className="bg-green-100 text-green-600 px-5 py-2 rounded-full hover:bg-green-500 hover:text-white transition">
+        <button className="bg-[#B6E77740] text-green-600 px-5 py-2 rounded-full hover:bg-green-500 hover:text-white transition">
           All
         </button>
         <button className="bg-gray-100 text-gray-600 px-5 py-2 rounded-full hover:bg-green-500 hover:text-white transition">

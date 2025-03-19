@@ -1,15 +1,28 @@
-import { FiLock, FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiLock } from "react-icons/fi";
 import profile from "../assets/profile.jpeg";
 import savedIcon from "../assets/save-instagram.png";
-const CandidateList: React.FC = () => {
+import savedlist from "../assets/Clipboard list.png";
+interface CandidateListProps {
+  toggleDrawer: () => void;
+}
+
+const CandidateList: React.FC<CandidateListProps> = ({ toggleDrawer }) => {
   return (
-    <div className="bg-gray-50 p-5 shadow-sm rounded-lg m-5 border border-gray-300 relative">
+    <div className="bg-gray-50 p-6 shadow-sm rounded-lg m-12 border border-gray-300 relative">
       {/* Candidate Header */}
-      <img
-        src={savedIcon}
-        alt="Favorite"
-        className="absolute top-4 right-4 w-6 h-6 cursor-pointer"
-      />
+      <div className="absolute top-4 right-4 flex items-center gap-2">
+        <img
+          src={savedlist}
+          alt="Favorite"
+          className="w-8 h-8 cursor-pointer"
+        />
+        <img
+          src={savedIcon}
+          alt="Favorite"
+          className="w-6 h-6 cursor-pointer"
+        />
+      </div>
+
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <FiLock className="text-gray-500" size={18} />
@@ -59,11 +72,14 @@ const CandidateList: React.FC = () => {
         </span>
       </div>
 
-      {/* View Application Button */}
-      <div className="mt-6 flex justify-end">
-        {" "}
-        {/* Added flex justify-end to align button to the right */}
-        <button className="flex items-center gap-2 border px-4 py-2 rounded-md hover:bg-gray-100 transition">
+      {/* Applied Text and View Application Button */}
+      <div className="mt-4 flex justify-between items-center">
+        <span className="text-semibold">Applied 2 days ago</span>
+
+        <button
+          className="flex items-center gap-2 border px-4 py-2 rounded-md hover:bg-gray-100 transition"
+          onClick={toggleDrawer}
+        >
           <FiExternalLink size={18} />
           View Application
         </button>

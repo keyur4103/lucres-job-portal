@@ -41,7 +41,7 @@ const Header: React.FC = () => {
 
         <div className="mx-4"></div>
 
-        <button className="bg-green-400 hover:bg-green-500 text-white px-5 py-2 rounded-full font-medium">
+        <button className="bg-[#B6E777] hover:bg-green-100 text-white px-5 py-2 rounded-full font-medium">
           + Create a Job
         </button>
 
