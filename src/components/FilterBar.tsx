@@ -53,11 +53,11 @@ const FilterBar: React.FC = () => {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 bg-[#D4D3D3] text-[#212121] px-4 py-2 rounded-md hover:bg-[#B6E777] hover:text-white transition cursor-pointer">
+            <button className="flex items-center gap-2 bg-[#F5F5F5] text-[#212121] px-4 py-2 rounded-md hover:bg-[#B6E777] hover:text-white transition cursor-pointer">
               <FiUsers size={18} />
               Add team member
             </button>
-            <button className="flex items-center gap-2 bg-[#D4D3D3] text-[#212121] px-4 py-2 rounded-md hover:bg-[#B6E777] hover:text-white transition cursor-pointer">
+            <button className="flex items-center gap-2 bg-[#F5F5F5] text-[#212121] px-4 py-2 rounded-md hover:bg-[#B6E777] hover:text-white transition cursor-pointer">
               <FiEdit3 size={18} />
               Edit Job
             </button>
