@@ -3,11 +3,7 @@ import Header from "./components/Header";
 import Profile from "./components/Profile";
 import FilterBar from "./components/FilterBar";
 import CandidateList from "./components/CandidateList";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 
 const App: React.FC = () => {
@@ -58,7 +54,7 @@ const App: React.FC = () => {
                       isProfileOpen ? "w-1/2 h-full" : "w-0 h-full"
                     }`}
                   >
-                    {isProfileOpen && <Profile toggleProfile={toggleProfile} />}
+                    {isProfileOpen && <Profile />}
                   </div>
                 </div>
               }
