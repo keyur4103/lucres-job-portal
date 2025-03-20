@@ -34,9 +34,9 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen custom-scroll ml-5">
+    <div className="flex flex-col lg:flex-row min-h-screen custom-scroll w-full">
       {/* Sidebar */}
-      <aside className="w-full lg:w-1/4 p-6 bg-white border-r border-gray-300">
+      <aside className="w-full lg:w-1/4 p-12 bg-white border-r border-gray-300">
         <div className="flex flex-col">
           <img
             src={brandLogo}
@@ -64,7 +64,7 @@ const Dashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1">
+      <main className="flex-1 flex flex-col items-center justify-center">
         {/* Brand Banner with Edit Button */}
         <div className="relative w-full">
           <img
@@ -88,7 +88,7 @@ const Dashboard = () => {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex flex-wrap justify-center border-b border-gray-200 mt-4">
+        <div className="flex flex-wrap justify-center border-b border-gray-200 mt-4 w-full">
           {[
             "Dashboard",
             "Jobs",
