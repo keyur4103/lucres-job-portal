@@ -1,4 +1,5 @@
 import { FiArrowUpRight, FiCalendar } from "react-icons/fi";
+import profile from "../assets/profile.jpeg";
 
 const InterviewList = () => {
   const interviews = [
@@ -19,7 +20,7 @@ const InterviewList = () => {
       date: "25 May 2024",
       time: "4:00 PM",
       img: "src/assets/profile.jpeg",
-    }
+    },
   ];
 
   return (
@@ -41,7 +42,7 @@ const InterviewList = () => {
         {interviews.map((item, index) => (
           <div key={index} className="flex items-center gap-4 py-2">
             <img
-              src={item.img}
+              src={profile}
               alt={item.name}
               className="w-12 h-12 rounded-full"
             />
