@@ -77,7 +77,7 @@ const CandidateList: React.FC<CandidateListProps> = ({ toggleDrawer }) => {
         <span className="text-semibold">Applied 2 days ago</span>
 
         <button
-          className="flex items-center gap-2 border px-4 py-2 rounded-md hover:bg-gray-100 transition"
+          className="flex items-center gap-2 border px-4 py-2 rounded-md hover:bg-gray-100 transition cursor-pointer"
           onClick={toggleDrawer}
         >
           <FiExternalLink size={18} />

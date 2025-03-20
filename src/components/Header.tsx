@@ -1,7 +1,10 @@
 import { FiSearch, FiHome, FiBriefcase, FiUser, FiBell } from "react-icons/fi";
 import logo from "../assets/logo.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <header className="bg-white w-full px-4 py-1 flex items-center">
@@ -22,26 +25,28 @@ const Header: React.FC = () => {
 
         <div className="flex items-center gap-6">
           <FiHome
-            className="text-gray-600 hover:text-green-500 cursor-pointer"
+            className="text-gray-600 hover:bg-[#B6E77725]  cursor-pointer"
             size={22}
+            onClick={() => navigate("/")} // Navigate on click
           />
           <FiBriefcase
-            className="text-gray-600 hover:text-green-500 cursor-pointer"
+            className="text-gray-600 hover:bg-[#B6E77725] cursor-pointer"
             size={22}
           />
           <FiUser
-            className="text-gray-600 hover:text-green-500 cursor-pointer"
+            className="text-gray-600 hover:bg-[#B6E77725] cursor-pointer"
             size={22}
+            onClick={() => navigate("/candidate")} // Navigate on click
           />
           <FiBell
-            className="text-gray-600 hover:text-green-500 cursor-pointer"
+            className="text-gray-600 hover:bg-[#B6E77725] cursor-pointer"
             size={22}
           />
         </div>
 
         <div className="mx-4"></div>
 
-        <button className="bg-[#B6E777] hover:bg-green-100 text-white px-5 py-2 rounded-full font-medium">
+        <button className="bg-[#B6E777] hover:bg-[#B6E77725] text-[#2D4232] px-5 py-2 rounded-full">
           + Create a Job
         </button>
 
