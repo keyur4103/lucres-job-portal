@@ -36,7 +36,7 @@ const Dashboard = () => {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen custom-scroll w-full">
       {/* Sidebar */}
-      <aside className="w-full lg:w-1/4 p-12 bg-white border-r border-gray-300">
+      <aside className="w-full lg:w-1/5 p-12 bg-white border-r border-gray-300">
         <div className="flex flex-col">
           <img
             src={brandLogo}
@@ -64,7 +64,7 @@ const Dashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-center">
+      <main className="flex-[2] flex flex-col items-center justify-center w-full">
         {/* Brand Banner with Edit Button */}
         <div className="relative w-full">
           <img
@@ -145,7 +145,7 @@ const Dashboard = () => {
         </div>
 
         {/* Job Listings */}
-        <div className="custom-scroll h-full overflow-y-auto space-y-4 p-4">
+        <div className="custom-scroll h-full overflow-y-auto space-y-4 p-4 w-full">
           {jobs.map((job, index) => (
             <JobCard key={index} {...job} />
           ))}
